@@ -315,7 +315,7 @@ button:focus,
    display: grid;
    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-gap: 20px;
    margin: 0;
 
@@ -337,17 +337,22 @@ button:focus,
 }
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
-    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
-@media all and (max-width: 750px) {
+@media all and (min-width:750px) and (max-width:950px){
+  .grid {
+    grid-gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 1250px) {
   .grid {
     grid-gap: 10px;
   }
